@@ -16,14 +16,15 @@ public class TextBoxTests {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
+        Configuration.holdBrowserOpen = false;
         Configuration.timeout = 5000; // default 4000
     }
 
     @Test
     void fillFormTest() {
         open("/automation-practice-form");
-        executeJavaScript("$('#RightSide_Advertisement').remove()");
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
 
         $("#firstName").setValue("Alex");
         $("#lastName").setValue("Ivanov");
