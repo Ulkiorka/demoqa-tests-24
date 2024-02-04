@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class SearchingSoftAssertionsInSelenideWiki {
     @BeforeAll
-    static void BeforeAll() {
+    static void configuration() {
         pageLoadStrategy = "eager";
     }
 
